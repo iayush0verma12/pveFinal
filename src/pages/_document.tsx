@@ -1,19 +1,19 @@
-import React from 'react'
-import theme from '@/config/theme'
-import { NextComponentType } from 'next'
-import { AppInitialProps } from 'next/app'
-import { EmotionCache } from '@emotion/cache'
-import { createEmotionCache } from '@/utils'
-import createEmotionServer from '@emotion/server/create-instance'
-import { AppContextType, AppPropsType } from 'next/dist/shared/lib/utils'
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import React from 'react';
+import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
+import { NextComponentType } from 'next';
+import { AppInitialProps } from 'next/app';
+import { EmotionCache } from '@emotion/cache';
+import { createEmotionCache } from '@/utils';
+import createEmotionServer from '@emotion/server/create-instance';
+import { AppContextType, AppPropsType } from 'next/dist/shared/lib/utils';
+import theme from '@/config/theme';
 
-interface DocumentProps {
-  emotionStylesTags: any[]
+interface DocumentProps extends DocumentInitialProps {
+  emotionStyleTags: JSX.Element[];
 }
 
 class MyDocument extends Document<DocumentProps> {
-  render(): any {
+  render() {
     return (
       <Html lang="en">
         <Head>
@@ -23,11 +23,10 @@ class MyDocument extends Document<DocumentProps> {
 
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.background.paper} />
-
-          <meta content="#fbfbfb" name="theme-color" />
-          <meta content="#fbfbfb" name="msapplication-navbutton-color" />
-          <meta content="#fbfbfb" name="apple-mobile-web-app-status-bar-style" />
-          <meta content="yes" name="apple-mobile-web-app-capable" />
+          <meta name="theme-color" content="#fbfbfb" />
+          <meta name="msapplication-navbutton-color" content="#fbfbfb" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="#fbfbfb" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
@@ -36,48 +35,22 @@ class MyDocument extends Document<DocumentProps> {
             rel="stylesheet"
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
-          {this.props.emotionStylesTags}
+          {this.props.emotionStyleTags}
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
-// `getInitialProps` belongs to `_document` (instead of `_app`),
-// it's compatible with static-site generation (SSG).
-MyDocument.getInitialProps = async (ctx: DocumentContext) => {
-  // Resolution order
-  //
-  // On the server:
-  // 1. app.getInitialProps
-  // 2. page.getInitialProps
-  // 3. document.getInitialProps
-  // 4. app.render
-  // 5. page.render
-  // 6. document.render
-  //
-  // On the server with error:
-  // 1. document.getInitialProps
-  // 2. app.render
-  // 3. page.render
-  // 4. document.render
-  //
-  // On the client
-  // 1. app.getInitialProps
-  // 2. page.getInitialProps
-  // 3. app.render
-  // 4. page.render
+MyDocument.getInitialProps = async (ctx: DocumentContext): Promise<DocumentInitialProps & DocumentProps> => {
+  const originalRenderPage = ctx.renderPage;
 
-  const originalRenderPage = ctx.renderPage
-
-  // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
-  // However, be aware that it can have global side effects.
-  const cache = createEmotionCache()
-  const { extractCriticalToChunks } = createEmotionServer(cache)
+  const cache = createEmotionCache();
+  const { extractCriticalToChunks } = createEmotionServer(cache);
 
   ctx.renderPage = () =>
     originalRenderPage({

@@ -1,14 +1,13 @@
-import React, { FC } from 'react'
-import Image from 'next/image'
-import Box from '@mui/material/Box'
-import Rating from '@mui/material/Rating'
-import Typography from '@mui/material/Typography'
-import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
-import ArrowForward from '@mui/icons-material/ArrowForward'
-import { Course } from '@/interfaces/course'
+import React, { FC } from 'react';
+import Image from 'next/image';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import IconButton, { iconButtonClasses } from '@mui/material/IconButton';
+import ArrowForward from '@mui/icons-material/ArrowForward';
+import { Course } from '@/interfaces/course';
 
 interface Props {
-  item: Course
+  item: Course;
 }
 
 const CourseCardItem: FC<Props> = ({ item }) => {
@@ -49,19 +48,12 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           <Typography component="h2" variant="h5" sx={{ mb: 2, height: 56, overflow: 'hidden', fontSize: '1.2rem' }}>
             {item.title}
           </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {/* <Rating name="rating-course" value={item.rating} max={5} sx={{ color: '#ffce31', mr: 1 }} readOnly />
-            <Typography component="span" variant="h5">
-              ({item.ratingCount})
-            </Typography> */}
-          </Box>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Typography variant="h5" color="primary.main">
               {'Know More'}
             </Typography>
-            {/* <Typography variant="h6">/ </Typography> */}
           </Box>
           <IconButton
             color="primary"
@@ -72,7 +64,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
         </Box>
       </Box>
     </Box>
-  )
+  );
 }
 
-export default CourseCardItem
+export default CourseCardItem;
