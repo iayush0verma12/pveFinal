@@ -3,7 +3,7 @@ import type { Course } from '@/interfaces/course'
 export const data: Array<Course> = [
   {
     id: 1,
-    cover: '/images/courses/WEIGHTSCALE.jpg',
+    cover: '/images/courses/WEIGHTSCALE.png',
     title: 'Electronic Weighing Scale',
     rating: 5,
     ratingCount: 9,
@@ -12,7 +12,7 @@ export const data: Array<Course> = [
   },
   {
     id: 2,
-    cover: '/images/courses/IMG_1089.jpg',
+    cover: '/images/courses/IMG_1089.png',
     title: 'CCTV CAMERAS',
     rating: 5,
     ratingCount: 15,
@@ -21,7 +21,7 @@ export const data: Array<Course> = [
   },
   {
     id: 3,
-    cover: '/images/courses/IMG_1092.jpg',
+    cover: '/images/courses/IMG_1092.png',
     title: 'JEWELLERY',
     rating: 4,
     ratingCount: 7,
@@ -30,7 +30,7 @@ export const data: Array<Course> = [
   },
   {
     id: 4,
-    cover: '/images/courses/IMG_1093.jpg',
+    cover: '/images/courses/IMG_1093.png',
     title: 'HANDCRAFTS',
     rating: 4,
     ratingCount: 12,
@@ -39,7 +39,7 @@ export const data: Array<Course> = [
   },
   {
     id: 5,
-    cover: '/images/courses/IMG_1090.jpg',
+    cover: '/images/courses/IMG_1090.png',
     title: 'Gold Testing Machine',
     rating: 4,
     ratingCount: 32,
@@ -57,7 +57,7 @@ export const data: Array<Course> = [
   },
   {
     id: 7,
-    cover: '/images/courses/IMG_1094.jpg',
+    cover: '/images/courses/IMG_1094.png',
     title: 'GPS TRACKING',
     rating: 4,
     ratingCount: 6,
