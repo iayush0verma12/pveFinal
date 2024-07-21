@@ -12,7 +12,7 @@ export const data: Array<Course> = [
   },
   {
     id: 2,
-    cover: '/images/courses/IMG_1089.png',
+    cover: '/images/courses/cctvcam.png',
     title: 'CCTV CAMERAS',
     rating: 5,
     ratingCount: 15,
