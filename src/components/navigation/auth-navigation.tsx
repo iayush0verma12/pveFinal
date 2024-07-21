@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import Box from '@mui/material/Box';
 import { StyledButton } from '@/components/styled-button';
 import Typography from '@mui/material/Typography';
+import Image from 'next/image';
 
 const AuthNavigation: FC = () => {
   const [showPhoneNumber, setShowPhoneNumber] = useState(false);
@@ -21,7 +22,7 @@ const AuthNavigation: FC = () => {
             Know more about our products. Contact Now!
           </Typography>
           <Box display="flex" alignItems="center">
-            <img
+            <Image
               src="/images/contact.png"
               alt="Logo"
               width={20}
@@ -45,7 +46,7 @@ const AuthNavigation: FC = () => {
             </Typography>
           </Box> */}
           <Box display="flex" alignItems="center">
-            <img
+            <Image
               src="/images/email.png"
               alt="Logo"
               width={20}
