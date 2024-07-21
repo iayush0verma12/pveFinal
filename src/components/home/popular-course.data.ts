@@ -39,7 +39,7 @@ export const data: Array<Course> = [
   },
   {
     id: 5,
-    cover: '/images/courses/gold.png',
+    cover: '/images/courses/goldone.png',
     title: 'Gold Testing Machine',
     rating: 4,
     ratingCount: 32,
