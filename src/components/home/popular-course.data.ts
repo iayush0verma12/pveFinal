@@ -39,7 +39,7 @@ export const data: Array<Course> = [
   },
   {
     id: 5,
-    cover: '/images/courses/WEIGHTSCALE.png',
+    cover: '/images/courses/cam.png',
     title: 'Gold Testing Machine',
     rating: 4,
     ratingCount: 32,
@@ -57,7 +57,7 @@ export const data: Array<Course> = [
   },
   {
     id: 7,
-    cover: '/images/courses/WEIGHTSCALE.png',
+    cover: '/images/courses/cam.png',
     title: 'GPS TRACKING',
     rating: 4,
     ratingCount: 6,
