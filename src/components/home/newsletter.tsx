@@ -58,7 +58,7 @@ const HomeNewsLetter: FC = () => {
         </Box>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
 export default HomeNewsLetter;
