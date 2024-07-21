@@ -44,7 +44,7 @@ export const data: Array<Course> = [
     rating: 4,
     ratingCount: 32,
     price: 35,
-    category: 'Intermediate',
+    category: 'Beginner',
   },
   {
     id: 6,
