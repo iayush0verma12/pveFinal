@@ -48,7 +48,7 @@ export const data: Array<Course> = [
   },
   {
     id: 6,
-    cover: '/images/courses/IMG_1091.jpg',
+    cover: '/images/courses/IMG_1091.png',
     title: 'Note Counting Machine',
     rating: 5,
     ratingCount: 14,
