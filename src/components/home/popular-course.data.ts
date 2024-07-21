@@ -21,7 +21,7 @@ export const data: Array<Course> = [
   },
   {
     id: 3,
-    cover: '/images/courses/jewellerytwo.png',
+    cover: '/images/courses/jewellerythree.png',
     title: 'JEWELLERY',
     rating: 4,
     ratingCount: 7,
