@@ -7,8 +7,8 @@ interface Props {
   variant?: 'primary' | 'secondary';
 }
 
-const Logo: FC<Props> = ({ onClick, variant }) => (
-  <Box onClick={onClick} sx={{ cursor: onClick ? 'pointer' : 'default' }}>
+const Logo: FC<Props> = ({ onClick, variant }) => {
+  return (<Box onClick={onClick} sx={{ cursor: onClick ? 'pointer' : 'default' }}>
     <Typography
       variant="h4"
       component="h1"
@@ -22,8 +22,9 @@ const Logo: FC<Props> = ({ onClick, variant }) => (
       />
       {/* Course<span>space</span> */}
     </Typography>
-  </Box>
-);
+  </Box>)
+};
+
 
 Logo.defaultProps = {
   variant: 'primary',
