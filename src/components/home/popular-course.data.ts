@@ -30,7 +30,7 @@ export const data: Array<Course> = [
   },
   {
     id: 4,
-    cover: '/images/courses/IMG_1093.png',
+    cover: '/images/courses/Untitled23.png',
     title: 'HANDCRAFTS',
     rating: 4,
     ratingCount: 12,
